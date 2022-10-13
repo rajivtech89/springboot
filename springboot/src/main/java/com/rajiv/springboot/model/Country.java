@@ -12,6 +12,10 @@ public class Country {
 		this.countryName = countryName;
 		this.countryCapital = countryCapital;
 	}
+	
+	public Country() {
+		
+	}
 
 	public int getId() {
 		return id;

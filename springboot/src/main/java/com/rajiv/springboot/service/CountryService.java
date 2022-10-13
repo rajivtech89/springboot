@@ -13,7 +13,7 @@ public interface CountryService {
 	
 	Country addCountry(Country country);
 	
-	Country updateCountry(Country country);
+	void updateCountry(Country country, int countryId);
 	
-	String deleteCountry(int countryId);
+	void deleteCountry(int countryId);
 }

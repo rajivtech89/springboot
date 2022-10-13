@@ -30,12 +30,12 @@ public class CountryServiceImpl implements CountryService {
 		return repo.addCountry(country);
 	}
 	@Override
-	public Country updateCountry(Country country) {
-		return repo.updateCountry(country);
+	public void updateCountry(Country country,int countryId) {
+		 repo.updateCountry(country,countryId);
 	}
 	@Override
-	public String deleteCountry(int countryId) {
-		return repo.deleteCountry(countryId);
+	public void deleteCountry(int countryId) {
+		 repo.deleteCountry(countryId);
 	}
 
 }
