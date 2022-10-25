@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: USER Management
+  datasource:
+    url: ${datasource.url}
+    username: : ${datasource.username}
+    password: : ${datasource.password}
+  jpa:
+    properties:
+    show-sql: true
+      hibernate:
+      ddl-auto:none
+      	dialect:${datasource.dialect}
+      	connection:
+      		characterEncoding:UTF-8
+      		CharSet: UTF-8
+      		useUnicode: true
+    

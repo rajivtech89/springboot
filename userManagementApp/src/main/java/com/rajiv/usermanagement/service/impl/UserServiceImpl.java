@@ -3,12 +3,15 @@ package com.rajiv.usermanagement.service.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.rajiv.usermanagement.dto.Users;
 import com.rajiv.usermanagement.repo.UserRepository;
 import com.rajiv.usermanagement.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
+	@Autowired
 	private UserRepository repo;
 
 	@Override
