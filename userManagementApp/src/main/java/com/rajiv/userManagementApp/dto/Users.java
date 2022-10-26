@@ -1,4 +1,4 @@
-package com.rajiv.usermanagement.dto;
+package com.rajiv.userManagementApp.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,10 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USERS")
 public class Users {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue()
 	private int id;
 	private String name;
 	private String address;

@@ -1,4 +1,4 @@
-package com.rajiv.usermanagement.api;
+package com.rajiv.userManagementApp.api;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rajiv.usermanagement.dto.Users;
-import com.rajiv.usermanagement.service.UserService;
+import com.rajiv.userManagementApp.dto.Users;
+import com.rajiv.userManagementApp.service.UserService;
 
 @RestController
 public class UserController {
@@ -37,13 +37,13 @@ public class UserController {
 		return new ResponseEntity<>(service.save(user), HttpStatus.CREATED);
 	}
 
-	@PutMapping("/users")
-	public ResponseEntity<Users> updateUser(@RequestBody Users user, @PathVariable Integer userId) {
+	@PutMapping("/users/{id}")
+	public ResponseEntity<Users> updateUser(@RequestBody Users user, @PathVariable("id") Integer userId) {
 		return new ResponseEntity<>(service.update(user, userId), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/users")
-	public ResponseEntity<String> deleteUser(@PathVariable Integer userId) {
+	@DeleteMapping("/users/{id}")
+	public ResponseEntity<String> deleteUser(@PathVariable("id") Integer userId) {
 		return new ResponseEntity<>(service.delete(userId), HttpStatus.OK);
 	}
 }
